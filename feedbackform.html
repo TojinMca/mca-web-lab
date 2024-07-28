@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://cdn.dribbble.com/users/603698/screenshots/4024686/konmari_graphic_26.gif') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .navbar {
+            background-color: rgba(153, 79, 79, 0.7);
+            margin-bottom: 10px;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .hero {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .container {
+            background-color: rgba(153, 79, 79, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+            margin-right: 5%;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #c9a3a3;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4c4e4e;
+            border: none;
+            color: #f4bfbf;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: rgba(153, 79, 79, 0.7);
+        }
+        footer {
+            background-color: rgba(153, 79, 79, 0.7);
+            color: white;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Feedback Panel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="d-flex justify-content-end align-items-center flex-grow-1">
+        <div class="container">
+            <h2>Feedback Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg_no">Registration Number:</label>
+                    <input type="text" id="reg_no" name="reg_no" placeholder="Your Registration Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="5" placeholder="Enter your feedback here" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Category:</label><br>
+                    <input type="radio" id="student" name="category" value="Student" required>
+                    <label for="student">Student</label><br>
+                    <input type="radio" id="teacher" name="category" value="Teacher" required>
+                    <label for="teacher">Teacher</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>© 2024 Admin Panel. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

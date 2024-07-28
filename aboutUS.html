@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AcademiaHub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            background-image: url('https://media1.giphy.com/media/5g2I8HU3XwckE/giphy.gif');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: rgba(153, 79, 79, 0.7)
+        }
+
+        .navbar-brand, .nav-link {
+            color: rgba(22, 3, 3, 0.7) !important;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .main-content article {
+            flex: 1 1 300px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-content article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid #0056b3;
+        }
+
+        button:hover {
+            background-color: #7c7d7e;
+            color: #fff;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?education,school') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+        }
+
+        .team-container {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(153, 79, 79, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">About US Panel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero text-center">
+            <div class="container">
+                <h1>About AcademiaHub</h1>
+                <p>Welcome to AcademiaHub, where education meets excellence.</p>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <article>
+                <h2>Our Mission</h2>
+                <p>To provide high-quality education that empowers students to reach their full potential and make a positive impact on society.</p>
+            </article>
+            <article>
+                <h2>Our Vision</h2>
+                <p>To be a leading educational institution known for innovation, excellence, and inclusiveness.</p>
+            </article>
+            <article>
+                <h2>Our Values</h2>
+                <p>Integrity, Innovation, Inclusiveness, and Excellence in all our endeavors.</p>
+            </article>
+            <article>
+                <h2>Our History</h2>
+                <p>Founded in 1990, AcademiaHub has grown from a small local college to a globally recognized institution.</p>
+            </article>
+        </section>
+
+        <section class="gallery">
+            <img src="https://www.collegebatch.com/static/clg-gallery/christ-university-bangalore-302727.webp" alt="Campus Image 1">
+            <img src="https://images.shiksha.com/mediadata/images/1580449195phpC0Bg6J.png" alt="Campus Image 2">
+            <img src="https://www.sju.edu.in/images/actv-mmg_3.jpg" alt="Campus Image 3">
+            <img src="https://educationquest.org/wp-content/uploads/2020/03/college-campus-856x556.png" alt="Campus Image 4">
+        </section>
+
+        <aside>
+            <div class="container team-container my-5">
+                <h2>Meet Our Team</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="Team Member 1">
+                            <div class="card-body">
+                                <h5 class="card-title">TOJIN SIMSON</h5>
+                                <p class="card-text">Dean of Faculty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://media.istockphoto.com/id/1320811419/photo/head-shot-portrait-of-confident-successful-smiling-indian-businesswoman.jpg?s=612x612&w=0&k=20&c=bCUTB8vd8MnzZFIq-x645-SmLNk2sQzOvOvWCPGDfZ4=" class="card-img-top" alt="Team Member 2">
+                            <div class="card-body">
+                                <h5 class="card-title">JAIBY JOSEPH</h5>
+                                <p class="card-text">Head of Admissions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-600nw-1714666150.jpg" class="card-img-top" alt="Team Member 3">
+                            <div class="card-body">
+                                <h5 class="card-title">VISHNU PRASAD</h5>
+                                <p class="card-text">Financial Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <footer>
+            <p>&copy; 2024 About US Panel. All rights reserved.</p>
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

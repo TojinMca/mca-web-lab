@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspapers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('newspaper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(255, 255, 255, 0.85);
+            /* Semi-transparent white background */
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent container background */
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Increased gap for better spacing */
+            justify-content: space-between;
+        }
+
+        .category-box {
+            flex: 1 1 calc(33.33% - 15px); /* Adjust for the gap */
+            margin: 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .category-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-box a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .category-box a:hover {
+            color: #007bff;
+        }
+
+        .category-box img {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .home-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .fa-home {
+            font-size: 32px;
+            color: #2c3e50;
+        }
+
+        .categories {
+            margin-bottom: 20px;
+        }
+
+        .categories h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .form-section {
+            margin-top: 20px;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="homepage.html" class="home-btn">
+        <i class="fas fa-home"></i> <!-- Font Awesome Home Icon -->
+    </a>
+
+    <header class="container">
+        <h1>NEWSLETTER</h1>
+    </header>
+
+    <main class="container">
+        <section class="categories">
+            <h2>General Magazines</h2>
+            <div class="category-list">
+                <div class="category-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqJibDjz16-1IpkWUk4CjmDuup1INvXSE0g&s" alt="Frontline Logo">
+                    <a href="https://www.frontline.in/"><strong>Frontline Magazine</strong></a>
+                </div>
+                <div class="category-box">
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/livetv/indiaToday.jpg" alt="India Today Logo">
+                    <a href="https://www.indiatoday.in/"><strong>India Today</strong></a>
+                </div>
+                <div class="category-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBjuR9SDDOLFevrEK2R3mOw2O3lTw5xf391w&s" alt="Outlook Logo">
+                    <a href="https://www.outlookindia.com/"><strong>Outlook</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Kannada Magazines</h2>
+            <div class="category-list">
+                <div class="category-box">
+                    <img src="https://media.licdn.com/dms/image/D560BAQF0bnx3CSCC_w/company-logo_200_200/0/1686725160812/magzter_logo?e=2147483647&v=beta&t=rojDAb7u-L0eIfhyVdAOLjcCtaJxvhSTB_Z5awT6jfY" alt="Magzter Logo">
+                    <a href="https://www.magzter.com/magazines/language/Kannada"><strong>ಮ್ಯಾಗ್ಸ್ಟರ್</strong></a>
+                </div>
+                <div class="category-box">
+                    <img src="https://lh4.googleusercontent.com/proxy/aB4ZWQrtNpDPu-4tsjfxOUbMHzLHllLE--E53HJHLKAhblWbMzklJ9-kwjs5vzXl9W9g4f84uB_O" alt="Mayura Logo">
+                    <a href="http://www.mayuraezine.com"><strong>ಮಯೂರ</strong></a>
+                </div>
+                <div class="category-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2VwE9JDPFe0PqK0Yr5jlYP_FR9aQ3gxQU2A&s" alt="Be a Winner Logo">
+                    <a href="https://www.discountmags.com/magazine/be-a-winner-kannada-digital-m"><strong>ಬಿ ಎ ವಿನ್ನರ್</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Hindi Magazines</h2>
+            <div class="category-list">
+                <div class="category-box">
+                    <img src="https://tma-live.s3.ap-south-1.amazonaws.com/medias/55b7e0218ead0e48288b46ed/1565801081524/0be0ff639bf3872ceda0015b856e71b4.jpg" alt="Grihshobha Logo">
+                    <a href="https://www.grihshobha.in/"><strong>गृहशोभा</strong></a>
+                </div>
+                <div class="category-box">
+                    <img src="https://pbs.twimg.com/profile_images/1016232360558415873/itCV5QpH_400x400.jpg" alt="Tehelka Logo">
+                    <a href="https://www.magzter.com/IN/Anant_Media_Pvt_Ltd/Tehelka_Hindi/News/All-Issues"><strong>तहलका</strong></a>
+                </div>
+                <div class="category-box">
+                    <img src="https://yt3.googleusercontent.com/QjeHdZ8SGpWGA1tL9WPhbwY5hz84ZSs3p1nkn7rCth3KrWUnx1guzTzfJeRRc0ygoI8htoyFRg=s900-c-k-c0x00ffffff-no-rj" alt="Pratiyogita Darpan Logo">
+                    <a href="https://www.pdgroup.in/"><strong>प्रतियोगिता दर्पण</strong></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

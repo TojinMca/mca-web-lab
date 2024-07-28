@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eNewspaper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://img.freepik.com/premium-photo/old-newspaper-background-white-grunge-paper-texture-scratched-textured-newsprint_662214-402143.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .hero {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .content {
+            padding: 20px;
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .category h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">E-NEWSPAPER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="e-paper.html">Language</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Newspaper World</h1>
+        <p>Explore our comprehensive coverage of current events, detailed analysis, and exclusive features in various categories including Politics, Sports, Entertainment, and more.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container content">
+        <!-- e-Magazine Section -->
+        <section id="magazine" class="category">
+            <h2>e-Magazine</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Latest Issue</h5>
+                    <p class="card-text">Read our latest e-magazine issue with exclusive articles and features.</p>
+                    <a href="https://www.magzter.com/most-popular" class="btn btn-secondary">Read Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Categories Section -->
+        <section id="categories" class="category">
+            <h2>News Categories</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Politics</h5>
+                            <p class="card-text">Latest updates on political news.</p>
+                            <a href="https://economictimes.indiatimes.com/news/politics?from=mdr" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sports</h5>
+                            <p class="card-text">All the latest sports news and scores.</p>
+                            <a href="https://indianexpress.com/section/sports/" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Entertainment</h5>
+                            <p class="card-text">Stay updated with the latest in entertainment.</p>
+                            <a href="https://timesofindia.indiatimes.com/entertainment" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Technology</h5>
+                            <p class="card-text">Latest news in technology and gadgets.</p>
+                            <a href="https://indianexpress.com/section/technology/" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Health</h5>
+                            <p class="card-text">Updates and news on health and wellness.</p>
+                            <a href="https://www.medicalnewstoday.com/" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Science</h5>
+                            <p class="card-text">Explore the latest scientific discoveries and research.</p>
+                            <a href="https://www.sciencenews.org/" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="marquee">
+            <p>© 2024 eNewspaper. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

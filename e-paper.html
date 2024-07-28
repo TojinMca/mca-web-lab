@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspapers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('newspaper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background */
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 10px;
+            border: 1px solid black; /* Add border */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .newspapers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Adjusted alignment */
+            margin: -10px; /* Adjusted margin for spacing */
+        }
+
+        .newspaper {
+            flex: 0 1 calc(25% - 20px); /* Four items per row with a gap of 20px */
+            margin: 10px; /* Adjusted margin for spacing */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+            border: 1px solid black; /* Add border */
+            text-align: center;
+        }
+
+        .newspaper:hover {
+            transform: translateY(-5px);
+        }
+
+        .newspaper a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .newspaper a:hover {
+            color: #007bff;
+        }
+
+        .newspaper img {
+            height: 100px; /* Reduced image height */
+            width: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 10px; /* Added margin for spacing */
+        }
+
+        .top-image {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 8px;
+        }
+
+        .home-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .fa-home {
+            font-size: 32px; /* Adjust the size of the home icon */
+            color:#2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+<a href="enewspaper.html" class="home-btn">
+    <i class="fas fa-home"></i> <!-- Font Awesome Home Icon -->
+</a>
+
+<div class="container">
+    <h1>NEWSPAPER</h1>
+    <div class="newspapers">
+        <div class="newspaper hindustantimes">
+            <img src="hindustantimes.jpg" alt="Hindustan Times">
+            <a href="https://www.hindustantimes.com/">Hindustan Times</a>
+        </div>
+        <div class="newspaper thehindu">
+            <img src="hindulogo.jpg" alt="The Hindu">
+            <a href="https://www.thehindu.com/">The Hindu</a>
+        </div>
+        <div class="newspaper timesofindia">
+            <img src="timesofindia.jpg" alt="The Times of India">
+            <a href="https://timesofindia.indiatimes.com/">The Times of India</a>
+        </div>
+        <div class="newspaper twentyfour news">
+            <img src="https://yt3.googleusercontent.com/eqbZ6s1e5--bLtQT-w_COL6u7ajCp_cUwtc-yXUntjsmXwjflWaFgKRrP0ao02Zhw3e_7zZIfA=s900-c-k-c0x00ffffff-no-rj" alt="Deccan Herald">
+            <a href="https://www.twentyfournews.com/">TwentyFour News</a>
+        </div>
+        <div class="newspaper mathrubhumi">
+            <img src="mathrubhumi.jpg" alt="Mathrubhumi">
+            <a href="https://newspaper.mathrubhumi.com/">Mathrubhumi</a>
+        </div>
+        <div class="newspaper asianet">
+            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/7c5fa4158569787.638e3dba74607.png" alt="Mathrubhumi">
+            <a href="https://www.asianetnews.com/">Asianet News</a>
+        </div>
+        <div class="newspaper jagran">
+            <img src="https://www.jagranimages.com/images/newimg/jagran.jpg" alt="Mathrubhumi">
+            <a href="https://www.jagran.com/">Jagran</a>
+        </div>
+        <div class="newspaper andhrajyothy">
+            <img src="https://www.andhrajyothy.com/assets/images/logo.png" alt="Mathrubhumi">
+            <a href="https://www.andhrajyothy.com/">Andhra Jyothy</a>
+        </div>
+        <div class="newspaper prajavani">
+            <img src="prajavani.jpg" alt="Prajavani">
+            <a href="https://www.prajavani.net/">Prajavani</a>
+        </div>
+        <!-- Add more newspapers here -->
+    </div>
+</div>
+
+</body>
+</html>

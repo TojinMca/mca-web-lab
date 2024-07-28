@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            background-image: url('https://i.pinimg.com/736x/60/22/52/602252b4b408f8b8902c94868e6f3ced.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #clg-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+            margin-left: 120px;
+        }
+
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: silver;
+            color: #2c3e50;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #e74c3c;
+        }
+
+        .navbar {
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+            /* Align items horizontally */
+            justify-content: center;
+            /* Center items in the navbar */
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 10px;
+            /* Space between nav items */
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            /* Adjust font size */
+            font-weight: 500;
+            /* Set font weight */
+            padding: 10px 15px;
+            /* Add padding for better click area */
+            color: #fff;
+            /* Link color */
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+            border-radius: 5px;
+            /* Rounded corners for nav links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f39c12;
+            /* Change color on hover */
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Add slight background color on hover for better visibility */
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .container-info {
+            background-color: rgba(255,255,255,0.7);
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .container-info h3 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .container-info p {
+            color: #555;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        .container-info img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .container-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .navbar-nav {
+                flex-direction: column;
+                /* Stack items vertically on small screens */
+                text-align: center;
+                /* Center align text on small screens */
+            }
+
+            .navbar-nav .nav-item {
+                margin: 10px 0;
+                /* Space between items on small screens */
+            }
+
+            .container-info {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div id="clg-logo">
+            <img src="https://as1.ftcdn.net/v2/jpg/01/02/11/82/1000_F_102118240_kBd3ZkRYvNDysfvsDy5OmtUlH2FaHUes.jpg"
+                alt="clg Logo" width="100">
+        </div>
+        <h1>AcademiaHub</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="mainhome.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="parentloginpage.html"><i class="fas fa-user"></i> Parent
+                        Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="studentloginpage.html"><i class="fas fa-user-graduate"></i>
+                        Student Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="admin-login-pg.html"><i class="fas fa-user-shield"></i>
+                        Admin Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="enewspaper.html"><i class="far fa-newspaper"></i>
+                        E-NewsPaper</a></li>
+                <li class="nav-item"><a class="nav-link" href="newsletter.html"><i class="far fa-newspaper"></i>
+                        E-NewsLetter</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="bookinfo.html"><i class="fas fa-book"></i> Books</a></li>-->
+                <li class="nav-item"><a class="nav-link" href="feedbackform.html"><i class="fas fa-comments"></i>
+                        Feedback</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="reference.html"><i class="fas fa-link"></i> Reference</a></li>-->
+                <li class="nav-item"><a class="nav-link" href="aboutUS.html"><i class="fas fa-info-circle"></i> About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2><i class="fas fa-book-open"></i> Welcome to the College Management Portal</h2>
+        <p>Your gateway to academic excellence and efficient management. Explore our tools and services designed to
+            enhance your learning experience.</p>
+
+        <div class="container-grid">
+            <div class="container-info">
+                <a href="">
+                    <img src="https://donboscobangalore.education/img/sections/slider/placements1.jpg" alt="Placements">
+                </a>
+                <h3><a href="https://christuniversity.in/center/C/CPCG" style="color: #2c3e50; text-decoration: none;">Placements</a></h3>
+                <p>Our placement cell is dedicated to connecting students with top companies for internships and job
+                    opportunities.</p>
+            </div>
+
+            <div class="container-info">
+                <a href="">
+                    <img src="https://m.economictimes.com/thumb/msid-80444943,width-1200,height-900,resizemode-4,imgsize-97626/untitled-1.jpg"
+                        alt="Health Services">
+                </a>
+                <h3><a href="htps://christuniversity.in/center/C/hs/health-centre" style="color: #2c3e50; text-decoration: none;">Health Services</a></h3>
+                <p>Comprehensive health services to ensure the well-being of our students and staff.</p>
+            </div>
+
+            <div class="container-info">
+                <a href="">
+                    <img src="https://s3-ap-south-1.amazonaws.com/ricedigitals3bucket/AUPortalContent/2021/05/31112658/Untitled-design-34.png"
+                        alt="Alumni">
+                </a>
+                <h3><a href="htps://alumni.christuniversity.in/achievements" style="color: #2c3e50; text-decoration: none;">Alumni</a></h3>
+                <p>Stay connected with our alumni network and celebrate their achievements and contributions.</p>
+            </div>
+
+            <!-- New Section: Latest News -->
+            <div class="container-info">
+                <a href="news.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxWN2Mb4kHP58owTLf_-E_HwpDZ9_rFqBe4UZta07lGaJvdy0GHgzRmuFjvdlytUAtEb8&usqp=CAU" alt="Latest News">
+                </a>
+                <h3><a href="enewspaper.html" style="color: #2c3e50; text-decoration: none;">Latest News</a></h3>
+                <p>Stay updated with the latest news and events happening on campus.</p>
+            </div>
+
+            <!-- New Section: Academic Calendar -->
+            <div class="container-info">
+                <a href="academic-calendar.html">
+                    <img src="https://www.gncollege.co.in/wp-content/uploads/2021/08/academic-calendar.png" alt="Academic Calendar">
+                </a>
+                <h3><a href="academic-calendar.html" style="color: #2c3e50; text-decoration: none;">Academic Calendar</a></h3>
+                <p>Check out our academic calendar for important dates and schedules.</p>
+            </div>
+
+            <!-- New Section: Campus Facilities -->
+            <div class="container-info">
+                <a href="campus-facilities.html">
+                    <img src="https://www.globsyn.edu.in/wp-content/uploads/2021/12/Campus-Facilities.jpg" alt="Campus Facilities">
+                </a>
+                <h3><a href="campus-facilities.html" style="color: #2c3e50; text-decoration: none;">Campus Facilities</a></h3>
+                <p>Explore the state-of-the-art facilities available on our campus.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">
+            <i class="fas fa-bullhorn"></i> Stay tuned for upcoming events and important announcements!
+        </marquee>
+    </div>
+
+    <footer>
+        &copy; 2024 AcademiaHub. All rights reserved.
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery (Bootstrap requires jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+</body>
+
+</html>
