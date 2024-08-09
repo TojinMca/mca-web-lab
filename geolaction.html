@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Location with Geolocation</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>College Location</h1>
+    </header>
+
+    <main class="container">
+        <div id="map"></div>
+        <button id="get-location" class="btn">Get My Location</button>
+        <p id="status"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AcademiaHub. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Coordinates for the college
+        const collegeLocation = [12.9716, 77.5946];
+        const collegeAddress = "AcademiaHub College, Begur Road, Bengaluru";
+
+        // Initialize the map
+        var map = L.map('map').setView(collegeLocation, 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add marker for the college
+        L.marker(collegeLocation).addTo(map)
+            .bindPopup(`<b>${collegeAddress}</b>`)
+            .openPopup();
+
+        document.getElementById('get-location').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById('status').textContent = "Geolocation is not supported by this browser.";
+            }
+        });
+
+        function showPosition(position) {
+            const userLatitude = position.coords.latitude;
+            const userLongitude = position.coords.longitude;
+
+            const userLocation = [userLatitude, userLongitude];
+
+            // Add marker for the user's location
+            L.marker(userLocation, {icon: L.icon({iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png', iconSize: [25, 41]})})
+                .addTo(map)
+                .bindPopup('You are here')
+                .openPopup();
+
+            // Center map on user's location
+            map.setView(userLocation, 15);
+
+            // Add a route to the college from the user's location
+            L.Routing.control({
+                waypoints: [
+                    L.latLng(userLatitude, userLongitude),
+                    L.latLng(collegeLocation[0], collegeLocation[1])
+                ],
+                routeWhileDragging: true
+            }).addTo(map);
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById('status').textContent = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById('status').textContent = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById('status').textContent = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById('status').textContent = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@
             padding: 0;
             background-color: #f0f0f0;
             color: #333;
-            background-image: url('https://i.pinimg.com/736x/60/22/52/602252b4b408f8b8902c94868e6f3ced.jpg');
+            background-image: url('https://img95.lovepik.com/photo/40105/1085.gif_wh860.gif');
             background-size: cover;
             background-attachment: fixed;
         }
@@ -25,295 +25,472 @@
             padding: 20px;
             text-align: center;
             position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        #clg-logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
+        nav {
+            background-color: #343a40;
         }
 
-        h1 {
-            display: inline-block;
-            margin-left: 120px;
+        nav .navbar-brand img {
+            width: 50px;
+        }
+        .search-input {
+            width: 200px;
         }
 
-        .logout-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: silver;
-            color: #2c3e50;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .form-inline {
+            margin-left: 15px;
         }
 
-        .logout-btn:hover {
-            background-color: #e74c3c;
-        }
-
-        .navbar {
-            padding: 0;
-            /* Remove default padding */
-        }
-
-        .navbar-nav {
-            flex-direction: row;
-            /* Align items horizontally */
-            justify-content: center;
-            /* Center items in the navbar */
-        }
-
-        .navbar-nav .nav-item {
-            margin: 0 10px;
-            /* Space between nav items */
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 16px;
-            /* Adjust font size */
-            font-weight: 500;
-            /* Set font weight */
-            padding: 10px 15px;
-            /* Add padding for better click area */
-            color: #fff;
-            /* Link color */
-            transition: color 0.3s ease;
-            /* Smooth color transition */
-            border-radius: 5px;
-            /* Rounded corners for nav links */
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #f39c12;
-            /* Change color on hover */
-            background-color: rgba(255, 255, 255, 0.1);
-            /* Add slight background color on hover for better visibility */
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        section h2 {
-            color: #2c3e50;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        section p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .container-info {
-            background-color: rgba(255,255,255,0.7);
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            height: 300px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .hero-container {
             position: relative;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            color: white;
+            margin-bottom: 50px; /* Space between hero-container and carousel */
         }
 
-        .container-info:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .container-info h3 {
-            color: #2c3e50;
-            font-size: 20px;
-            margin-bottom: 10px;
+        .hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            padding: 20px;
         }
 
-        .container-info p {
-            color: #555;
-            font-size: 14px;
-            margin-top: auto;
+        .lefthero {
+            float: left;
         }
 
-        .container-info img {
+        .text {
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: #343a40;
+            margin-top: 70px;
+        }
+
+        .about {
+            padding: 50px 0;
+            background: rgba(219, 153, 153, 0.9);
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: 500px;
+            border-radius: 10px;
+        }
+
+        .courses {
+            padding: 50px 0;
+        }
+
+        .course-box {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .course-image {
+            max-width: 100%;
+            height: 220px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .course-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0c6c6;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-life {
+            padding: 50px 0;
+            background: #c5a7a7;
+        }
+
+        .student-life-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0c6c6;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-life-image {
+            max-width: 100%;
+            height: 220px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .principal-note {
+            padding: 50px 0;
+            background: #c5a7a7;
+        }
+
+        .principal-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .principal-info {
+            margin-bottom: 15px;
+        }
+
+        .principal-note-text {
+            text-align: justify;
+        }
+
+        .alumni {
+            padding: 50px 0;
+            background: #c5a7a7;
+        }
+
+        .alumni-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f0c6c6;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .alumni-image {
+            max-width: 100%;
+            height: 220px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .logo {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        .carousel-inner video {
             width: 100%;
             height: auto;
-            max-height: 150px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .container-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .marquee {
-            white-space: nowrap;
-            overflow: hidden;
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 10px;
-        }
-
-        @media (max-width: 600px) {
-            .navbar-nav {
-                flex-direction: column;
-                /* Stack items vertically on small screens */
-                text-align: center;
-                /* Center align text on small screens */
-            }
-
-            .navbar-nav .nav-item {
-                margin: 10px 0;
-                /* Space between items on small screens */
-            }
-
-            .container-info {
-                width: 100%;
-                max-width: 300px;
-                height: auto;
-            }
         }
     </style>
 </head>
 
 <body>
-
-    <header>
-        <div id="clg-logo">
-            <img src="https://as1.ftcdn.net/v2/jpg/01/02/11/82/1000_F_102118240_kBd3ZkRYvNDysfvsDy5OmtUlH2FaHUes.jpg"
-                alt="clg Logo" width="100">
-        </div>
-        <h1>AcademiaHub</h1>
-    </header>
-
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#"><img src="fool.svg" class="logo1" width="100" alt="College Logo">AcademiaHub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="mainhome.html"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="parentloginpage.html"><i class="fas fa-user"></i> Parent
-                        Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="studentloginpage.html"><i class="fas fa-user-graduate"></i>
-                        Student Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="admin-login-pg.html"><i class="fas fa-user-shield"></i>
-                        Admin Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="enewspaper.html"><i class="far fa-newspaper"></i>
-                        E-NewsPaper</a></li>
-                <li class="nav-item"><a class="nav-link" href="newsletter.html"><i class="far fa-newspaper"></i>
-                        E-NewsLetter</a></li>
-                <!--<li class="nav-item"><a class="nav-link" href="bookinfo.html"><i class="fas fa-book"></i> Books</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="feedbackform.html"><i class="fas fa-comments"></i>
-                        Feedback</a></li>
-                <!--<li class="nav-item"><a class="nav-link" href="reference.html"><i class="fas fa-link"></i> Reference</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="aboutUS.html"><i class="fas fa-info-circle"></i> About Us</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="parentloginpage.html"><i class="fas fa-user"></i> Parent Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="studentloginpage.html"><i class="fas fa-user-graduate"></i> Student Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="admin-login-pg.html"><i class="fas fa-user-shield"></i> Admin Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="enewspaper.html"><i class="far fa-newspaper"></i> E-NewsPaper</a></li>
+                <li class="nav-item"><a class="nav-link" href="newsletter.html"><i class="far fa-newspaper"></i> E-NewsLetter</a></li>
+                <li class="nav-item"><a class="nav-link" href="feedbackform.html"><i class="fas fa-comments"></i> Feedback</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutUS.html"><i class="fas fa-info-circle"></i> About Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="container">
-        <h2><i class="fas fa-book-open"></i> Welcome to the College Management Portal</h2>
-        <p>Your gateway to academic excellence and efficient management. Explore our tools and services designed to
-            enhance your learning experience.</p>
-
-        <div class="container-grid">
-            <div class="container-info">
-                <a href="">
-                    <img src="https://donboscobangalore.education/img/sections/slider/placements1.jpg" alt="Placements">
-                </a>
-                <h3><a href="https://christuniversity.in/center/C/CPCG" style="color: #2c3e50; text-decoration: none;">Placements</a></h3>
-                <p>Our placement cell is dedicated to connecting students with top companies for internships and job
-                    opportunities.</p>
+    <!-- Hero Section with Gradient Background -->
+    <div class="hero-container">
+        <video src="" autoplay muted loop class="video"></video>
+        <div class="hero">
+            <div class="lefthero">
+                <img src="" class="logo2" alt="">
             </div>
-
-            <div class="container-info">
-                <a href="">
-                    <img src="https://m.economictimes.com/thumb/msid-80444943,width-1200,height-900,resizemode-4,imgsize-97626/untitled-1.jpg"
-                        alt="Health Services">
-                </a>
-                <h3><a href="htps://christuniversity.in/center/C/hs/health-centre" style="color: #2c3e50; text-decoration: none;">Health Services</a></h3>
-                <p>Comprehensive health services to ensure the well-being of our students and staff.</p>
+            <div class="text">
+                <h1>AcademiaHub </h1>
+                <h3>"Igniting Minds, Inspiring Futures:Where Knowledge and Innovation Thrive"</h3>
             </div>
+        </div>
+    </div>
 
-            <div class="container-info">
-                <a href="">
-                    <img src="https://s3-ap-south-1.amazonaws.com/ricedigitals3bucket/AUPortalContent/2021/05/31112658/Untitled-design-34.png"
-                        alt="Alumni">
-                </a>
-                <h3><a href="htps://alumni.christuniversity.in/achievements" style="color: #2c3e50; text-decoration: none;">Alumni</a></h3>
-                <p>Stay connected with our alumni network and celebrate their achievements and contributions.</p>
+    <!-- Video Carousel -->
+    
+    <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video src="video1.mp4" autoplay muted loop></video>
             </div>
-
-            <!-- New Section: Latest News -->
-            <div class="container-info">
-                <a href="news.html">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxWN2Mb4kHP58owTLf_-E_HwpDZ9_rFqBe4UZta07lGaJvdy0GHgzRmuFjvdlytUAtEb8&usqp=CAU" alt="Latest News">
-                </a>
-                <h3><a href="enewspaper.html" style="color: #2c3e50; text-decoration: none;">Latest News</a></h3>
-                <p>Stay updated with the latest news and events happening on campus.</p>
+            <div class="carousel-item">
+                <video src="video2.mp4" autoplay muted loop></video>
             </div>
-
-            <!-- New Section: Academic Calendar -->
-            <div class="container-info">
-                <a href="academic-calendar.html">
-                    <img src="https://www.gncollege.co.in/wp-content/uploads/2021/08/academic-calendar.png" alt="Academic Calendar">
-                </a>
-                <h3><a href="academic-calendar.html" style="color: #2c3e50; text-decoration: none;">Academic Calendar</a></h3>
-                <p>Check out our academic calendar for important dates and schedules.</p>
+            <div class="carousel-item">
+                <video src="video3.mp4" autoplay muted loop></video>
             </div>
+            <div class="carousel-item">
+                <video src="video4.mp4" autoplay muted loop></video>
+            </div>
+            <div class="carousel-item">
+                <video src="video5.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
-            <!-- New Section: Campus Facilities -->
-            <div class="container-info">
-                <a href="campus-facilities.html">
-                    <img src="https://www.globsyn.edu.in/wp-content/uploads/2021/12/Campus-Facilities.jpg" alt="Campus Facilities">
-                </a>
-                <h3><a href="campus-facilities.html" style="color: #2c3e50; text-decoration: none;">Campus Facilities</a></h3>
-                <p>Explore the state-of-the-art facilities available on our campus.</p>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Campus Life</h2>
+                    <p>Welcome to AcademiaHub, where campus life is as vibrant and diverse as our student body. Here, every day is an opportunity to explore, connect, and grow in a stimulating environment.
+                    <ul>
+                        <li> Our sprawling campus is designed to be a haven for both academic and personal development. From state-of-the-art classrooms to serene green spaces, AcademiaHub offers the perfect blend of modern facilities and natural beauty.</li>
+                        <li>Participate in our community service programs and outreach initiatives to make a positive impact on society and build meaningful connections.</li>
+                        <li>At AcademiaHub, academic excellence is complemented by a rich tapestry of social experiences. Enjoy themed parties, film screenings, and outdoor adventures with your peers.</li>
+                        <li>AcademiaHub’s commitment to sustainability is reflected in our eco-friendly practices and green initiatives, promoting a healthier environment for our community.Our dedicated career services team helps you connect with potential employers and gain valuable experience through internships and job placements, preparing you for a successful future.</li>
+                        <li>Enjoy the beauty of our campus year-round, with picturesque landscapes and seasonal events that make each visit a new adventure.Experience the synergy of academic excellence and vibrant campus life at AcademiaHub, where every day is an opportunity to grow, learn, and thrive.</li>
+                        <li>Join one of our many student organizations and clubs, where you can dive into everything from cultural celebrations to tech innovations. Whether you're passionate about music, sports, or social causes, there’s a place for you here.Our dedicated campus life team organizes a range of events, from lively festivals and academic conferences to guest lectures and workshops, providing endless opportunities for personal and professional growth.</li>
+                        <li><b> AcademiaHub, we don’t just educate; we ignite passions, forge futures, and empower dreams—where your journey begins, and greatness unfolds</b></li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <video src="campus.mp4" autoplay muted loop class="video"></video>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="marquee">
-        <marquee behavior="scroll" direction="left">
-            <i class="fas fa-bullhorn"></i> Stay tuned for upcoming events and important announcements!
-        </marquee>
-    </div>
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="text-center">Our Courses</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="course-box">
+                        <img src="https://www.i-com.it/wp-content/uploads/2018/06/intelligenza-artificiale_519560572.jpg" class="course-image" alt="Course Image">
+                        <h4>Bachelor of Science in Artificial Intelligence</h4>
+                        <p><b>Unlock the future with our Bachelor of Science in Artificial Intelligence. Dive deep into the world of machine learning and neural networks, and shape the next generation of technology. Transform data into intelligence and drive innovation</b></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-box">
+                        <img src="https://i0.wp.com/university.help.edu.my/wp-content/uploads/2023/11/Bachelor_BA.jpg?fit=1540%2C1027&ssl=1" class="course-image" alt="Course Image">
+                        <h4>Master of Business Analytics and Strategy</h4>
+                        <p><b>Master the art of data-driven decision-making with our Business Analytics and Strategy program. Gain expertise in analyzing complex business data and crafting strategies that propel companies forward. Lead with insights and make an impact.</b></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-box">
+                        <img src="https://iabac.org/blog/uploads/images/202404/image_870x_661cbf6c9033d.jpg" class="course-image" alt="Course Image">
+                        <h4>Master of Science in Data Science and Machine Learning</h4>
+                        <p><b>Harness the power of data with our Master of Science in Data Science and Machine Learning. Develop cutting-edge skills in analyzing and interpreting data to drive strategic decisions. Become a leader in the data-driven revolution.</b></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-box">
+                        <img src="https://www.stonewallco.com/hubfs/energy%20engineers.jpg" class="course-image" alt="Course Image">
+                        <h4>Bachelor of Engineering in Sustainable Energy</h4>
+                        <p><b>Engineer a greener future with our Bachelor of Engineering in Sustainable Energy. Learn to design and implement renewable energy solutions that tackle global challenges. Power a sustainable world and make a difference</b></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-box">
+                        <img src="https://www.meirc.com/assets/images/course-image/course/certificate-in-global-business-strategy-courses.jpg" class="course-image" alt="Course Image">
+                        <h4>Bachelor of Arts in International Relations</h4>
+                        <p><b>Navigate the complexities of global affairs with our Bachelor of Arts in International Relations. Understand international politics, diplomacy, and global issues that shape our world. Become a global citizen and advocate for change.</b></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-box">
+                        <img src="https://www.apu.edu.my/sites/default/files/master-of-science-in-cyber-security.jpg" class="course-image" alt="Course Image">
+                        <h4>Master of Science in Cybersecurity</h4>
+                        <p><b>Guard the digital frontier with our Master of Science in Cybersecurity. Delve into advanced techniques to protect data and systems from evolving threats. Become a key defender in the battle against cybercrime and secure the digital world</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        &copy; 2024 AcademiaHub. All rights reserved.
+    <!-- Student Life Section -->
+    <section id="student-life" class="student-life">
+        <div class="container">
+            <h2 class="text-center">College Infrastructure</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="student-life-box">
+                        <img src="https://www.beloit.edu/live/image/gid/12/width/900/height/600/crop/1/338_JOHNSON_20150924_312.rev.1559919043.jpg" class="student-life-image" alt="Student Life Image">
+                        <h4>Campus Dining and Cafeteria</h4>
+                        <p>Experience culinary excellence at our Campus Dining and Cafeteria, where every meal is crafted to nourish both body and soul. From gourmet options to comfort classics, our dining spaces are designed for both sustenance and socializing. Savor the taste of community in every bite and make every meal a memorable occasion.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="student-life-box">
+                        <img src="https://assets.nst.com.my/images/articles/1235240586_1659514271.jpg" class="student-life-image" alt="Student Life Image">
+                        <h4>Library and Learning Commons</h4>
+                        <p>Explore the Library and Learning Commons, where knowledge and creativity converge in a haven of intellectual growth. With cutting-edge resources and collaborative spaces, it’s not just a place to study but a launchpad for your academic journey. Discover a universe of learning where every book and idea fuels your success.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="student-life-box">
+                        <img src="https://image-tc.galaxy.tf/wijpeg-5ps2coapgb35s99t1o9sjkpd8/meadow2_standard.jpg?crop=107%2C0%2C1707%2C1280" class="student-life-image" alt="Student Life Image">
+                        <h4>Conference and Event Center</h4>
+                        <p>Our Conference and Event Center is the heartbeat of campus gatherings, where innovation meets inspiration. Hosting everything from dynamic lectures to grand celebrations, it’s a space where ideas come to life. Step into a world where every event is an opportunity to connect and thrive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Note Section -->
+    <section class="principal-note">
+        <div class="container">
+            <h2 class="text-center"> Overview of AcademiaHub College:</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnM5NSYYX6UZdub50ulIXiznzHG15vokxChA&s" class="principal-image" alt="Principal's Image">
+                </div>
+                <div class="col-md-6">
+                    <div class="principal-info">
+                        <h4>AcademiaHub</h4>
+                        
+                    </div>
+                    <p class="principal-note-text">At AcademiaHub College, we ignite the spark of innovation and excellence within every student. Our world-class faculty and cutting-edge facilities foster an environment where creativity and critical thinking flourish. With a commitment to holistic development, we offer a dynamic curriculum that prepares our students to excel in their chosen fields. Our vibrant campus life, marked by diverse cultural events and groundbreaking research opportunities, cultivates leaders of tomorrow. We take pride in our illustrious achievements and strong industry connections, ensuring our graduates are highly sought after by top global recruiters. At AcademiaHub, we don't just educate; we empower, inspire, and transform. Welcome to a place where potential meets opportunity and dreams turn into reality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Section -->
+    <section id="alumni" class="alumni">
+        <div class="container">
+            <h2 class="text-center">College Achievements</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="alumni-box">
+                        <img src="https://png.pngtree.com/png-vector/20190219/ourmid/pngtree-10-year-of-excellence-vector-template-design-illustration-png-image_573252.jpg" class="alumni-image" alt="Alumni Image">
+                        <h4>Celebrating Excellence:</h4>
+                        <p>Our college proudly showcases a legacy of academic and extracurricular achievements, with students consistently excelling in national competitions and industry accolades.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alumni-box">
+                        <img src="https://png.pngtree.com/png-clipart/20210224/ourmid/pngtree-five-pointed-star-ranking-first-png-image_2947407.jpg" class="alumni-image" alt="Alumni Image">
+                        <h4>Trailblazing Success</h4>
+                        <p>From groundbreaking research projects to award-winning performances, our students and faculty set benchmarks in every field, redefining what it means to achieve greatness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alumni-box">
+                        <img src="https://images.ctfassets.net/s600jj41gsex/jC7yKmwpLMQQnMbORx6xn/fcc229b86e617c1e7becf3f74276462e/img-react-improvements-01.jpg?w=768&q=50&fit=scale" class="alumni-image" alt="Alumni Image">
+                        <h4>Innovative Triumphs</h4>
+                        <p>With a track record of transformative contributions and pioneering initiatives, our college stands as a beacon of excellence, leading the way in education, research, and community impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="alumni" class="alumni">
+        <div class="container">
+            <h2 class="text-center">OUR RECRUITERS</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="alumni-box">
+                        <img src="https://cdn.logojoy.com/wp-content/uploads/20230509121014/apple-logo-600x398.jpg" class="alumni-image" alt="Alumni Image">
+                        <h4>Apple</h4>
+                        <p>Apple’s collaboration with AcademiaHub inspires creativity and excellence, connecting our students with a brand renowned for its groundbreaking design and visionary technology.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alumni-box">
+                        <img src="https://download.logo.wine/logo/Microsoft/Microsoft-Logo.wine.png" class="alumni-image" alt="Alumni Image">
+                        <h4>Microsoft</h4>
+                        <p>At the forefront of tech evolution, Microsoft’s partnership with us opens doors to a realm of possibilities, blending their legacy of innovation with our students’ boundless potential.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alumni-box">
+                        <img src="https://logowik.com/content/uploads/images/google-logo-2020.jpg" class="alumni-image" alt="Alumni Image">
+                        <h4>Google</h4>
+                        <p>Empowering future innovators, Google brings its cutting-edge technology and global influence to our campus, offering unparalleled opportunities for students to make their mark in the digital world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy;  2024 AcademiaHub. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </p>
+        </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery (Bootstrap requires jQuery) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $carousel = $('#videoCarousel');
+            var interval = 2000; // 7 seconds
+            var videoElements = $carousel.find('video');
+
+            // Set up the interval for changing slides
+            setInterval(function () {
+                var currentSlide = $carousel.find('.carousel-item.active');
+                var nextSlide = currentSlide.next('.carousel-item');
+                if (nextSlide.length === 0) {
+                    nextSlide = $carousel.find('.carousel-item').first();
+                }
+                $carousel.carousel('next');
+                videoElements.each(function () {
+                    this.pause();
+                });
+                videoElements.eq($carousel.find('.carousel-item.active').index()).play();
+            }, interval);
+        });
+    </script>
 </body>
 
 </html>
