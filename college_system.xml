@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<college xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.org/college_system"
+         xsi:schemaLocation="http://www.example.org/college_system college_system.xsd">
+
+    <!-- Departments and Courses -->
+    <department id="D1">
+        <name>Computer Science</name>
+        <course id="C101">
+            <title>Introduction to Programming</title>
+            <credits>3</credits>
+        </course>
+        <course id="C102">
+            <title>Data Structures</title>
+            <credits>4</credits>
+        </course>
+        <course id="C103">
+            <title>Algorithms</title>
+            <credits>4</credits>
+        </course>
+    </department>
+
+    <department id="D2">
+        <name>Mathematics</name>
+        <course id="C201">
+            <title>Calculus I</title>
+            <credits>3</credits>
+        </course>
+        <course id="C202">
+            <title>Linear Algebra</title>
+            <credits>3</credits>
+        </course>
+        <course id="C203">
+            <title>Probability and Statistics</title>
+            <credits>4</credits>
+        </course>
+    </department>
+
+    <department id="D3">
+        <name>Physics</name>
+        <course id="C301">
+            <title>Classical Mechanics</title>
+            <credits>4</credits>
+        </course>
+        <course id="C302">
+            <title>Electromagnetism</title>
+            <credits>4</credits>
+        </course>
+    </department>
+
+    <department id="D4">
+        <name>Chemistry</name>
+        <course id="C401">
+            <title>Organic Chemistry</title>
+            <credits>4</credits>
+        </course>
+        <course id="C402">
+            <title>Inorganic Chemistry</title>
+            <credits>4</credits>
+        </course>
+    </department>
+
+    <!-- Students -->
+    <students>
+        <student id="S01">
+            <name>Tojin</name>
+            <major>Computer Science</major>
+            <enrolled-courses>
+                <course id="C101"/>
+                <course id="C102"/>
+            </enrolled-courses>
+        </student>
+        <student id="S02">
+            <name>Tobin</name>
+            <major>Mathematics</major>
+            <enrolled-courses>
+                <course id="C201"/>
+                <course id="C202"/>
+            </enrolled-courses>
+        </student>
+        <student id="S03">
+            <name>Mobin</name>
+            <major>Mathematics</major>
+            <enrolled-courses>
+                <course id="C204"/>
+                <course id="C205"/>
+            </enrolled-courses>
+        </student>
+        <student id="S04">
+            <name>Anna</name>
+            <major>Physics</major>
+            <enrolled-courses>
+                <course id="C301"/>
+                <course id="C302"/>
+            </enrolled-courses>
+        </student>
+        <student id="S05">
+            <name>Raj</name>
+            <major>Chemistry</major>
+            <enrolled-courses>
+                <course id="C401"/>
+                <course id="C402"/>
+            </enrolled-courses>
+        </student>
+        <student id="S06">
+            <name>Lisa</name>
+            <major>Chemistry</major>
+            <enrolled-courses>
+                <course id="C401"/>
+            </enrolled-courses>
+        </student>
+    </students>
+
+</college>

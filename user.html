@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: rgba(153, 79, 79, 0.7);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 60px;
+            z-index: 1000;
+            overflow: auto;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ddd !important;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            max-width: 600px;
+            margin: 80px auto 20px;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .valid {
+            border-color: #38a169;
+        }
+
+        .invalid {
+            border-color: #e53e3e;
+        }
+
+        .error-message {
+            color: #e53e3e;
+        }
+
+        .success-icon::after {
+            content: '✔';
+            color: #38a169;
+            margin-left: 5px;
+        }
+
+        .error-icon::after {
+            content: '✖';
+            color: #e53e3e;
+            margin-left: 5px;
+        }
+
+        .icon-wrapper {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .error-message {
+            position: relative;
+            margin-left: 25px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .input-wrapper input,
+        .input-wrapper textarea {
+            padding-right: 30px;
+        }
+
+        body {
+            background-image: url('user.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-content button {
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">User Register Panel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUS.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- User Registration Form -->
+    <div class="form-container">
+        <h1 class="text-2xl font-bold text-center">User Registration</h1>
+        <form id="registrationForm" class="space-y-4" novalidate>
+            <!-- Full Name Field -->
+            <div class="input-wrapper">
+                <label for="fullName" class="block text-sm font-medium">Full Name</label>
+                <div class="relative">
+                    <input type="text" id="fullName" name="fullName"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="fullNameIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="fullNameError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Email Field -->
+            <div class="input-wrapper">
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <div class="relative">
+                    <input type="email" id="email" name="email"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="emailIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="emailError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Gender Field -->
+            <div class="input-wrapper">
+                <label class="block text-sm font-medium">Gender</label>
+                <div class="flex items-center space-x-4 mt-1">
+                    <label class="flex items-center">
+                        <input type="radio" name="gender" value="Male" class="mr-2"> Male
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="gender" value="Female" class="mr-2"> Female
+                    </label>
+                </div>
+                <p id="genderError" class="mt-1 text-sm error-message hidden"></p>
+                <div id="genderIcon" class="icon-wrapper"></div>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="input-wrapper">
+                <label for="phone" class="block text-sm font-medium">Phone Number</label>
+                <div class="relative">
+                    <input type="text" id="phone" name="phone"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="phoneIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="phoneError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Address Field -->
+            <div class="input-wrapper">
+                <label for="address" class="block text-sm font-medium">Address</label>
+                <div class="relative">
+                    <textarea id="address" name="address" rows="3"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required></textarea>
+                    <div id="addressIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="addressError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Password Field -->
+            <div class="input-wrapper">
+                <label for="password" class="block text-sm font-medium">Password</label>
+                <div class="relative">
+                    <input type="password" id="password" name="password"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="passwordIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="passwordError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="input-wrapper">
+                <label for="confirmPassword" class="block text-sm font-medium">Confirm Password</label>
+                <div class="relative">
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="confirmPasswordIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="confirmPasswordError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Date of Birth Field -->
+            <div class="input-wrapper">
+                <label for="dob" class="block text-sm font-medium">Date of Birth</label>
+                <div class="relative">
+                    <input type="date" id="dob" name="dob"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="dobIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="dobError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full px-4 py-2 text-white bg-pink-500 rounded-md hover:bg-grey-600 disabled:bg-white-400 disabled:cursor-not-allowed"
+                id="submitButton">Register</button>
+        </form>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <h2 class="text-xl font-bold">Thank you for registering!</h2>
+            <p class="mt-2">Your registration was successful. If you have any questions, please contact us.</p>
+            <button id="closeModalButton" class="mt-4 px-4 py-2 text-white bg-blue-500 rounded-md">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('registrationForm');
+            const fullNameInput = document.getElementById('fullName');
+            const emailInput = document.getElementById('email');
+            const genderInputs = document.querySelectorAll('input[name="gender"]');
+            const phoneInput = document.getElementById('phone');
+            const addressInput = document.getElementById('address');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            const dobInput = document.getElementById('dob');
+
+            const validateFullName = () => {
+                if (fullNameInput.value.trim() === '') {
+                    showError('fullNameError', 'Full Name is required', 'fullNameIcon');
+                } else {
+                    hideError('fullNameError', 'fullNameIcon');
+                }
+            };
+
+            const validateEmail = () => {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value.trim())) {
+                    showError('emailError', 'Enter a valid email address', 'emailIcon');
+                } else {
+                    hideError('emailError', 'emailIcon');
+                }
+            };
+
+            const validateGender = () => {
+                if (![...genderInputs].some(input => input.checked)) {
+                    showError('genderError', 'Gender is required', 'genderIcon');
+                } else {
+                    hideError('genderError', 'genderIcon');
+                }
+            };
+
+            const validatePhone = () => {
+                const phonePattern = /^[0-9]{10}$/;
+                if (!phonePattern.test(phoneInput.value.trim())) {
+                    showError('phoneError', 'Enter a valid 10-digit phone number', 'phoneIcon');
+                } else {
+                    hideError('phoneError', 'phoneIcon');
+                }
+            };
+
+            const validateAddress = () => {
+                if (addressInput.value.trim() === '') {
+                    showError('addressError', 'Address is required', 'addressIcon');
+                } else {
+                    hideError('addressError', 'addressIcon');
+                }
+            };
+
+            const validatePassword = () => {
+                if (passwordInput.value.length < 6) {
+                    showError('passwordError', 'Password must be at least 6 characters long', 'passwordIcon');
+                } else {
+                    hideError('passwordError', 'passwordIcon');
+                }
+            };
+
+            const validateConfirmPassword = () => {
+                if (confirmPasswordInput.value !== passwordInput.value) {
+                    showError('confirmPasswordError', 'Passwords do not match', 'confirmPasswordIcon');
+                } else {
+                    hideError('confirmPasswordError', 'confirmPasswordIcon');
+                }
+            };
+
+            const validateDob = () => {
+                if (dobInput.value === '') {
+                    showError('dobError', 'Date of Birth is required', 'dobIcon');
+                } else {
+                    hideError('dobError', 'dobIcon');
+                }
+            };
+
+            const showError = (errorId, message, iconId) => {
+                const errorElement = document.getElementById(errorId);
+                errorElement.textContent = message;
+                errorElement.classList.remove('hidden');
+                const inputElement = document.getElementById(errorId.replace('Error', ''));
+                inputElement.classList.add('invalid');
+                const iconElement = document.getElementById(iconId);
+                iconElement.classList.remove('success-icon');
+                iconElement.classList.add('error-icon');
+            };
+
+            const hideError = (errorId, iconId) => {
+                const errorElement = document.getElementById(errorId);
+                errorElement.textContent = '';
+                errorElement.classList.add('hidden');
+                const inputElement = document.getElementById(errorId.replace('Error', ''));
+                inputElement.classList.remove('invalid');
+                inputElement.classList.add('valid');
+                const iconElement = document.getElementById(iconId);
+                iconElement.classList.remove('error-icon');
+                iconElement.classList.add('success-icon');
+            };
+
+            const showModal = () => {
+                const modal = document.getElementById('thankYouModal');
+                modal.classList.remove('hidden');
+            };
+
+            const closeModal = () => {
+                const modal = document.getElementById('thankYouModal');
+                modal.classList.add('hidden');
+                form.reset(); // Optional: Reset the form fields
+            };
+
+            // Attach event listeners for real-time validation
+            fullNameInput.addEventListener('input', validateFullName);
+            emailInput.addEventListener('input', validateEmail);
+            genderInputs.forEach(input => input.addEventListener('change', validateGender));
+            phoneInput.addEventListener('input', validatePhone);
+            addressInput.addEventListener('input', validateAddress);
+            passwordInput.addEventListener('input', validatePassword);
+            confirmPasswordInput.addEventListener('input', validateConfirmPassword);
+            dobInput.addEventListener('input', validateDob);
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                validateFullName();
+                validateEmail();
+                validateGender();
+                validatePhone();
+                validateAddress();
+                validatePassword();
+                validateConfirmPassword();
+                validateDob();
+                if (document.querySelectorAll('.error-message:not(.hidden)').length === 0) {
+                    showModal();
+                }
+            });
+
+            document.getElementById('closeModalButton').addEventListener('click', closeModal);
+        });
+    </script>
+</body>
+
+</html>
+ss

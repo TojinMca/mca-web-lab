@@ -1,0 +1,15 @@
+<!ELEMENT college (departments, students)>
+<!ELEMENT departments (department+)>
+<!ELEMENT department (name, courses)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT courses (course+)>
+<!ELEMENT course (title, credits)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, major, enrolledCourses)>
+<!ELEMENT major (#PCDATA)>
+<!ELEMENT enrolledCourses (course+)>
+<!ATTLIST department id ID #REQUIRED>
+<!ATTLIST course id ID #REQUIRED>
+<!ATTLIST student id ID #REQUIRED>

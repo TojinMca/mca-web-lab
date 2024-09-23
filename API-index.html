@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Explore Our Online Courses</h1>
+            <p>Find the best courses to enhance your skills and knowledge.</p>
+            <!-- Back Button -->
+            <button id="backButton" class="back-button">Back</button>
+        </div>
+    </header>
+    <main>
+        <div class="filters">
+            <div class="filter-group">
+                <label for="filter">Filter by name:</label>
+                <input type="text" id="filter" placeholder="Search...">
+            </div>
+            <div class="filter-group">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="name-asc">Name Ascending</option>
+                    <option value="name-desc">Name Descending</option>
+                </select>
+            </div>
+        </div>
+        <ul id="courseList" class="course-list"></ul>
+        <div class="pagination">
+            <button id="prevPage" class="pagination-button">Previous</button>
+            <div id="pageNumbers" class="page-numbers"></div>
+            <button id="nextPage" class="pagination-button">Next</button>
+        </div>
+    </main>
+    <script src="script1.js"></script>
+</body>
+</html>

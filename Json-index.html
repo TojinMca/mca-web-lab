@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Online Courses</h1>
+
+  <!-- Fetch Courses Button -->
+  <button id="fetch-courses">Fetch Courses</button>
+
+  <!-- API Button -->
+  <button id="api-button">API</button>
+
+  <!-- Filters Section -->
+  <section id="filters">
+    <input type="text" id="search" placeholder="Search by title or instructor">
+    <select id="sort">
+      <option value="title">Sort by Title</option>
+      <option value="rating">Sort by Rating</option>
+      <option value="price">Sort by Price</option>
+    </select>
+  </section>
+
+  <!-- Courses List Section -->
+  <section id="courses-list">
+    <!-- Courses will be dynamically loaded here -->
+  </section>
+
+  <!-- Pagination Section -->
+  <section id="pagination">
+    <!-- Pagination buttons will be dynamically loaded here -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

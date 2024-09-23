@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <subject name="Maths">
+        <book>Mathematics for Class 1</book>
+        <book>Mathematics for Class 2</book>
+        <book>Mathematics for Class 3</book>
+        <book>Applied Mathematics</book>
+        <book>Algebra Basics</book>
+        <book>Geometry Essentials</book>
+        <book>Calculus for Beginners</book>
+        <book>Statistics Overview</book>
+        <book>Advanced Calculus</book>
+        <book>Mathematical Analysis</book>
+        <book>Linear Algebra</book>
+        <book>Discrete Mathematics</book>
+        <book>Probability Theory</book>
+        <book>Complex Numbers</book>
+        <book>Mathematical Logic</book>
+        <book>Number Theory</book>
+        <book>Mathematics for Engineers</book>
+        <book>Mathematics for Scientists</book>
+        <book>Mathematics of Finance</book>
+        <book>Applied Statistics</book>
+    </subject>
+    <subject name="English">
+        <book>English Grammar for Beginners</book>
+        <book>English Literature for Class 1</book>
+        <book>Advanced English Grammar</book>
+        <book>English Composition</book>
+        <book>American Literature</book>
+        <book>British Literature</book>
+        <book>Shakespearean Plays</book>
+        <book>Poetry Anthology</book>
+        <book>Creative Writing</book>
+        <book>Business English</book>
+        <book>English for Exams</book>
+        <book>Reading Comprehension</book>
+        <book>IELTS Preparation</book>
+        <book>TOEFL Practice</book>
+        <book>Advanced Writing Techniques</book>
+        <book>English Phonetics</book>
+        <book>English Conversation</book>
+        <book>Historical Texts</book>
+        <book>Classic Novels</book>
+        <book>Language Arts</book>
+    </subject>
+    <subject name="Computer">
+        <book>Introduction to Computers</book>
+        <book>Computer Science Basics</book>
+        <book>Programming Fundamentals</book>
+        <book>Data Structures and Algorithms</book>
+        <book>Database Management Systems</book>
+        <book>Web Development</book>
+        <book>Operating Systems</book>
+        <book>Computer Networks</book>
+        <book>Cybersecurity</book>
+        <book>Software Engineering</book>
+        <book>Ethical Hacking</book>
+        <book>Artificial Intelligence</book>
+        <book>Machine Learning</book>
+        <book>Computer Graphics</book>
+        <book>Human-Computer Interaction</book>
+        <book>Cloud Computing</book>
+        <book>Big Data</book>
+        <book>Embedded Systems</book>
+        <book>Computer Architecture</book>
+        <book>Internet of Things</book>
+    </subject>
+    <subject name="Physics">
+        <book>Basic Physics</book>
+        <book>Physics for Class 1</book>
+        <book>Classical Mechanics</book>
+        <book>Electromagnetism</book>
+        <book>Quantum Physics</book>
+        <book>Thermodynamics</book>
+        <book>Optics</book>
+        <book>Relativity</book>
+        <book>Nuclear Physics</book>
+        <book>Particle Physics</book>
+        <book>Astrophysics</book>
+        <book>Condensed Matter Physics</book>
+        <book>Statistical Mechanics</book>
+        <book>Plasma Physics</book>
+        <book>Applied Physics</book>
+        <book>Fluid Dynamics</book>
+        <book>Biophysics</book>
+        <book>Geophysics</book>
+        <book>Medical Physics</book>
+        <book>Physics Laboratory Manual</book>
+    </subject>
+    <subject name="Chemistry">
+        <book>General Chemistry</book>
+        <book>Chemistry for Class 1</book>
+        <book>Organic Chemistry</book>
+        <book>Inorganic Chemistry</book>
+        <book>Physical Chemistry</book>
+        <book>Analytical Chemistry</book>
+        <book>Biochemistry</book>
+        <book>Environmental Chemistry</book>
+        <book>Industrial Chemistry</book>
+        <book>Medicinal Chemistry</book>
+        <book>Forensic Chemistry</book>
+        <book>Theoretical Chemistry</book>
+        <book>Chemical Engineering</book>
+        <book>Coordination Chemistry</book>
+        <book>Polymer Chemistry</book>
+        <book>Quantum Chemistry</book>
+        <book>Chemistry of Materials</book>
+        <book>Surface Chemistry</book>
+        <book>Nanochemistry</book>
+        <book>Chemical Thermodynamics</book>
+    </subject>
+</books>

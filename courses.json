@@ -1,0 +1,323 @@
+[
+    {
+      "courseId": "C101",
+      "title": "Introduction to Web Development",
+      "instructor": "John Doe",
+      "duration": "10 hours",
+      "rating": 4.5,
+      "category": "Web Development",
+      "price": "$50",
+      "enrolled": "2500"
+    },
+    {
+      "courseId": "C102",
+      "title": "Advanced JavaScript",
+      "instructor": "Jane Smith",
+      "duration": "8 hours",
+      "rating": 4.7,
+      "category": "Programming",
+      "price": "$60",
+      "enrolled": "3000"
+    },
+    {
+      "courseId": "C103",
+      "title": "Introduction to Artificial Intelligence",
+      "instructor": "Alice Johnson",
+      "duration": "12 hours",
+      "rating": 4.6,
+      "category": "Artificial Intelligence",
+      "price": "$70",
+      "enrolled": "2200"
+    },
+    {
+      "courseId": "C104",
+      "title": "Fundamentals of Financial Accounting",
+      "instructor": "Robert Brown",
+      "duration": "15 hours",
+      "rating": 4.8,
+      "category": "Finance",
+      "price": "$80",
+      "enrolled": "1800"
+    },
+    {
+      "courseId": "C105",
+      "title": "Principles of Marketing",
+      "instructor": "Emily Davis",
+      "duration": "10 hours",
+      "rating": 4.4,
+      "category": "Marketing",
+      "price": "$55",
+      "enrolled": "2100"
+    },
+    {
+      "courseId": "C106",
+      "title": "Advanced Calculus",
+      "instructor": "Michael Wilson",
+      "duration": "20 hours",
+      "rating": 4.3,
+      "category": "Mathematics",
+      "price": "$90",
+      "enrolled": "1600"
+    },
+    {
+      "courseId": "C107",
+      "title": "Global Environmental Issues",
+      "instructor": "Sophia Martinez",
+      "duration": "14 hours",
+      "rating": 4.5,
+      "category": "Environmental Science",
+      "price": "$65",
+      "enrolled": "1900"
+    },
+    {
+      "courseId": "C108",
+      "title": "Modern Literature and Criticism",
+      "instructor": "James Lee",
+      "duration": "11 hours",
+      "rating": 4.6,
+      "category": "Literature",
+      "price": "$50",
+      "enrolled": "1700"
+    },
+    {
+      "courseId": "C109",
+      "title": "Data Structures and Algorithms",
+      "instructor": "Linda Harris",
+      "duration": "16 hours",
+      "rating": 4.7,
+      "category": "Computer Science",
+      "price": "$75",
+      "enrolled": "2100"
+    },
+    {
+      "courseId": "C110",
+      "title": "Ethics in Technology",
+      "instructor": "Daniel Clark",
+      "duration": "9 hours",
+      "rating": 4.4,
+      "category": "Ethics",
+      "price": "$45",
+      "enrolled": "2000"
+    },
+    {
+      "courseId": "C111",
+      "title": "World History: Ancient to Modern",
+      "instructor": "Olivia Lewis",
+      "duration": "18 hours",
+      "rating": 4.6,
+      "category": "History",
+      "price": "$60",
+      "enrolled": "2500"
+    },
+    {
+      "courseId": "C112",
+      "title": "Organic Chemistry",
+      "instructor": "Henry Walker",
+      "duration": "22 hours",
+      "rating": 4.3,
+      "category": "Chemistry",
+      "price": "$85",
+      "enrolled": "1400"
+    },
+    {
+      "courseId": "C113",
+      "title": "Introduction to Quantum Physics",
+      "instructor": "Isabella Scott",
+      "duration": "13 hours",
+      "rating": 4.7,
+      "category": "Physics",
+      "price": "$70",
+      "enrolled": "1500"
+    },
+    {
+      "courseId": "C114",
+      "title": "Psychology of Human Behavior",
+      "instructor": "Liam Adams",
+      "duration": "12 hours",
+      "rating": 4.8,
+      "category": "Psychology",
+      "price": "$60",
+      "enrolled": "2300"
+    },
+    {
+      "courseId": "C115",
+      "title": "Introduction to Sociology",
+      "instructor": "Mia Nelson",
+      "duration": "11 hours",
+      "rating": 4.5,
+      "category": "Sociology",
+      "price": "$55",
+      "enrolled": "2000"
+    },
+    {
+      "courseId": "C116",
+      "title": "Creative Writing Workshop",
+      "instructor": "Benjamin Moore",
+      "duration": "10 hours",
+      "rating": 4.6,
+      "category": "Writing",
+      "price": "$50",
+      "enrolled": "2100"
+    },
+    {
+      "courseId": "C117",
+      "title": "Digital Media and Communication",
+      "instructor": "Charlotte White",
+      "duration": "14 hours",
+      "rating": 4.5,
+      "category": "Media",
+      "price": "$65",
+      "enrolled": "1900"
+    },
+    {
+      "courseId": "C118",
+      "title": "Introduction to Philosophy",
+      "instructor": "Ethan King",
+      "duration": "13 hours",
+      "rating": 4.4,
+      "category": "Philosophy",
+      "price": "$60",
+      "enrolled": "1700"
+    },
+    {
+      "courseId": "C119",
+      "title": "Computer Network Security",
+      "instructor": "Ava Harris",
+      "duration": "15 hours",
+      "rating": 4.7,
+      "category": "Cybersecurity",
+      "price": "$80",
+      "enrolled": "1800"
+    },
+    {
+      "courseId": "C120",
+      "title": "Principles of Microeconomics",
+      "instructor": "Oliver Young",
+      "duration": "12 hours",
+      "rating": 4.6,
+      "category": "Economics",
+      "price": "$55",
+      "enrolled": "2000"
+    },
+    {
+      "courseId": "C121",
+      "title": "Human Anatomy and Physiology",
+      "instructor": "Emily Lewis",
+      "duration": "20 hours",
+      "rating": 4.8,
+      "category": "Biology",
+      "price": "$90",
+      "enrolled": "1500"
+    },
+    {
+      "courseId": "C122",
+      "title": "Environmental Science and Sustainability",
+      "instructor": "Daniel Turner",
+      "duration": "18 hours",
+      "rating": 4.7,
+      "category": "Environmental Science",
+      "price": "$75",
+      "enrolled": "1600"
+    },
+    {
+      "courseId": "C123",
+      "title": "The Art of Public Speaking",
+      "instructor": "Grace Parker",
+      "duration": "10 hours",
+      "rating": 4.5,
+      "category": "Communication",
+      "price": "$50",
+      "enrolled": "2200"
+    },
+    {
+      "courseId": "C124",
+      "title": "Financial Management",
+      "instructor": "Liam Roberts",
+      "duration": "15 hours",
+      "rating": 4.6,
+      "category": "Finance",
+      "price": "$80",
+      "enrolled": "1700"
+    },
+    {
+      "courseId": "C125",
+      "title": "Introduction to Political Science",
+      "instructor": "Hannah Walker",
+      "duration": "12 hours",
+      "rating": 4.5,
+      "category": "Political Science",
+      "price": "$55",
+      "enrolled": "1900"
+    },
+    {
+      "courseId": "C126",
+      "title": "Introduction to Graphic Design",
+      "instructor": "Michael Scott",
+      "duration": "10 hours",
+      "rating": 4.4,
+      "category": "Design",
+      "price": "$50",
+      "enrolled": "2000"
+    },
+    {
+      "courseId": "C127",
+      "title": "Cultural Anthropology",
+      "instructor": "Sophia Evans",
+      "duration": "14 hours",
+      "rating": 4.6,
+      "category": "Anthropology",
+      "price": "$65",
+      "enrolled": "1800"
+    },
+    {
+      "courseId": "C128",
+      "title": "Statistics for Data Science",
+      "instructor": "James Turner",
+      "duration": "16 hours",
+      "rating": 4.7,
+      "category": "Data Science",
+      "price": "$70",
+      "enrolled": "2000"
+    },
+    {
+      "courseId": "C129",
+      "title": "Urban Studies and Planning",
+      "instructor": "Ava Robinson",
+      "duration": "15 hours",
+      "rating": 4.5,
+      "category": "Urban Studies",
+      "price": "$65",
+      "enrolled": "1700"
+    },
+    {
+      "courseId": "C130",
+      "title": "Introduction to Music Theory",
+      "instructor": "Ethan Walker",
+      "duration": "12 hours",
+      "rating": 4.6,
+      "category": "Music",
+      "price": "$60",
+      "enrolled": "1800"
+    },
+    {
+      "courseId": "C131",
+      "title": "Entrepreneurship and Innovation",
+      "instructor": "Olivia Anderson",
+      "duration": "14 hours",
+      "rating": 4.7,
+      "category": "Business",
+      "price": "$70",
+      "enrolled": "1900"
+    },
+    {
+      "courseId": "C132",
+      "title": "Basic Astronomy",
+      "instructor": "Liam Martinez",
+      "duration": "11 hours",
+      "rating": 4.4,
+      "category": "Astronomy",
+      "price": "$50",
+      "enrolled": "1600"
+    }
+  ]
+  

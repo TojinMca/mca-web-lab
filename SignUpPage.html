@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Signup Form</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: rgba(153, 79, 79, 0.7);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 60px;
+            z-index: 1000;
+            overflow: auto;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ddd !important;
+        }
+
+        .form-container {
+            background-color: rgba(166, 113, 113, 0.8);
+            width: 100%;
+            max-width: 600px;
+            margin: 80px auto 20px;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .valid {
+            border-color: #38a169;
+        }
+
+        .invalid {
+            border-color: #e53e3e;
+        }
+
+        .error-message {
+            color: #e53e3e;
+        }
+
+        .success-icon::after {
+            content: '✔';
+            color: #38a169;
+            margin-left: 5px;
+        }
+
+        .error-icon::after {
+            content: '✖';
+            color: #e53e3e;
+            margin-left: 5px;
+        }
+
+        .icon-wrapper {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .error-message {
+            position: relative;
+            margin-left: 25px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .input-wrapper input,
+        .input-wrapper textarea,
+        .input-wrapper select {
+            padding-right: 30px;
+        }
+
+        body {
+            background-image: url('https://cdn.dribbble.com/users/3826508/screenshots/13942123/media/55e328d9ac6cedd8e209faca7513ed8d.gif');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding-top: 60px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-content button {
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"> Course Signup</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="welcome.html">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUS.html"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Course Signup Form -->
+    <div class="form-container">
+        <h1 class="text-2xl font-bold text-center">Course Signup</h1>
+        <form id="signupForm" class="space-y-4" novalidate>
+            <!-- Full Name Field -->
+            <div class="input-wrapper">
+                <label for="fullName" class="block text-sm font-medium">Full Name</label>
+                <div class="relative">
+                    <input type="text" id="fullName" name="fullName"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="fullNameIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="fullNameError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Email Field -->
+            <div class="input-wrapper">
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <div class="relative">
+                    <input type="email" id="email" name="email"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="emailIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="emailError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Course Selection -->
+            <div class="input-wrapper">
+                <label for="course" class="block text-sm font-medium">Select Course</label>
+                <div class="relative">
+                    <select id="course" name="course"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                        <option value="" disabled selected>Select a course</option>
+                        <option value="course1">Introduction to Programming</option>
+                        <option value="course2">Data Structures and Algorithms</option>
+                        <option value="course3">Web Development Basics</option>
+                        <option value="course4">Advanced JavaScript</option>
+                        <option value="course5">Database Management Systems</option>
+                        <option value="course6">Software Engineering Principles</option>
+                        <option value="course7">Machine Learning Fundamentals</option>
+                        <option value="course8">Cybersecurity Essentials</option>
+                        <option value="course9">Mobile App Development</option>
+                        <option value="course10">Cloud Computing</option>
+                    </select>
+                    <div id="courseIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="courseError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="input-wrapper">
+                <label for="phone" class="block text-sm font-medium">Phone Number</label>
+                <div class="relative">
+                    <input type="tel" id="phone" name="phone"
+                        class="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required>
+                    <div id="phoneIcon" class="icon-wrapper"></div>
+                </div>
+                <p id="phoneError" class="mt-1 text-sm error-message hidden"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit"
+                    class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal for Error Messages -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <h4 id="modalTitle" class="text-xl font-bold mb-4"></h4>
+            <div id="modalBody"></div>
+            <button id="modalClose" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('signupForm');
+            const modal = document.getElementById('errorModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            const modalClose = document.getElementById('modalClose');
+
+            const fields = {
+                fullName: {
+                    element: document.getElementById('fullName'),
+                    icon: document.getElementById('fullNameIcon'),
+                    error: document.getElementById('fullNameError'),
+                    validate: value => value.trim() !== '',
+                    errorMessage: 'Full Name is required.'
+                },
+                email: {
+                    element: document.getElementById('email'),
+                    icon: document.getElementById('emailIcon'),
+                    error: document.getElementById('emailError'),
+                    validate: value => /\S+@\S+\.\S+/.test(value),
+                    errorMessage: 'A valid Email is required.'
+                },
+                course: {
+                    element: document.getElementById('course'),
+                    icon: document.getElementById('courseIcon'),
+                    error: document.getElementById('courseError'),
+                    validate: value => value !== '',
+                    errorMessage: 'Course selection is required.'
+                },
+                phone: {
+                    element: document.getElementById('phone'),
+                    icon: document.getElementById('phoneIcon'),
+                    error: document.getElementById('phoneError'),
+                    validate: value => /^\d{10}$/.test(value),
+                    errorMessage: 'Phone Number should be 10 digits.'
+                }
+            };
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                let isValid = true;
+                const errors = [];
+
+                for (const key in fields) {
+                    const field = fields[key];
+                    const value = field.element.value.trim();
+
+                    if (field.validate(value)) {
+                        field.icon.className = 'icon-wrapper success-icon';
+                        field.error.classList.add('hidden');
+                    } else {
+                        field.icon.className = 'icon-wrapper error-icon';
+                        field.error.textContent = field.errorMessage;
+                        field.error.classList.remove('hidden');
+                        isValid = false;
+                        errors.push(field.errorMessage);
+                    }
+                }
+
+                if (!isValid) {
+                    modalTitle.textContent = 'Form Submission Error';
+                    modalBody.innerHTML = errors.map(err => `<p>${err}</p>`).join('');
+                    modal.style.display = 'flex';
+                } else {
+                    // Redirect to index.html
+                    window.location.href = 'index.html';
+                }
+            });
+
+            modalClose.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route from Fixed Location to Current Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+        .navbar {
+            background-color: rgba(153, 79, 79, 0.7) !important;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ddd !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Map Panel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUS.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h3>Route from AcademiaHub College Location to My Current Location</h3>
+    <div id="map"></div>
+
+    <footer>
+        <p>&copy; 2024 Map Panel. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([12.9279, 77.6271], 13); // Default center
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Fetch fixed location from XML
+        fetch('location.xml')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, "text/xml");
+
+                const fixedLat = parseFloat(xmlDoc.getElementsByTagName("lat")[0].textContent);
+                const fixedLng = parseFloat(xmlDoc.getElementsByTagName("lng")[0].textContent);
+
+                const fixedLocation = [fixedLat, fixedLng];
+
+                // Add marker for fixed location
+                L.marker(fixedLocation).addTo(map)
+                    .bindPopup('AcademiaHub College, Begur Road, Bengaluru')
+                    .openPopup();
+
+                // Get the current location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(position => {
+                        const userLat = position.coords.latitude;
+                        const userLng = position.coords.longitude;
+
+                        const userLocation = [userLat, userLng];
+
+                        // Add marker for user's location
+                        L.marker(userLocation).addTo(map)
+                            .bindPopup('Your Location')
+                            .openPopup();
+
+                        // Define the routing control
+                        L.Routing.control({
+                            waypoints: [
+                                L.latLng(userLocation),
+                                L.latLng(fixedLocation)
+                            ],
+                            router: L.Routing.osrmv1({ language: 'en' }), // OSRM routing service
+                            createMarker: function() { return null; }, // Remove default markers
+                        }).addTo(map);
+
+                        // Center the map on user's location
+                        map.setView(userLocation, 13);
+                    }, () => {
+                        alert('Geolocation service failed. Please check your location settings.');
+                    });
+                } else {
+                    alert('Your browser doesn\'t support geolocation.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching XML: ', error);
+                alert('An error occurred while fetching the location data.');
+            });
+    </script>
+</body>
+</html>
